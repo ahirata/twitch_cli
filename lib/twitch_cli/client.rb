@@ -10,15 +10,15 @@ module TwitchCli
 
     def initialize *args
       super
-      @options = { :headers => {"Accept" => VERSION} }
+      @options = { :headers => {"Accept" => VERSION, "Accept-Encoding" => "gzip,deflate" }}
     end
 
     def get_games offset=0
-      self.class.get("/games/top", {query: {:offset => offset}.merge!(@options)})
+      self.class.get("/games/top", {:query => {:offset => offset}}.merge!(@options))
     end
 
     def get_streams game
-      self.class.get("/streams", {query: {:game => game}.merge!(@options)})
+      self.class.get("/streams", {:query => {:game => game}.merge!(@options)})
     end
   end
 end

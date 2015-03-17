@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "twitch_cli"
-  s.version     = "0.2.0"
+  s.version     = "0.2.1"
   s.date        = "2015-03-16"
   s.summary     = "Twitch CLI"
   s.description = "A command-line interface to list the online streams on Twitch"

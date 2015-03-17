@@ -2,17 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.twitch.tv/kraken/games/top?headers%5BAccept%5D=application/vnd.twitchtv.v3%2Bjson&offset=0
+    uri: https://api.twitch.tv/kraken/games/top?offset=0
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      - application/vnd.twitchtv.v3+json
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
       code: 200
@@ -21,11 +19,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 17 Mar 2015 04:24:59 GMT
+      - Tue, 17 Mar 2015 05:08:46 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '1089'
+      - '1072'
       Connection:
       - keep-alive
       Status:
@@ -41,17 +39,85 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - '"f243abdb9221bd4f6b3e0f2b9c70f57d"'
+      - '"d6c8f40d55b29b2d46396fdac754759b"'
       X-Request-Id:
-      - b5ea014c6263eb6d1846b2106b0c98e5
+      - 4d7ce59675d6a76f146011646a5b2274
       X-Runtime:
-      - '0.022501'
+      - '0.023322'
       Accept-Ranges:
       - bytes
       X-Varnish:
-      - 484055849 484050901
+      - 2225246372 2225176410
       Age:
-      - '1'
+      - '18'
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - appcache1; H
+      Front-End-Https:
+      - 'on'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_total":896,"_links":{"self":"https://api.twitch.tv/kraken/games/top?limit=10&offset=0","next":"https://api.twitch.tv/kraken/games/top?limit=10&offset=10"},"top":[{"viewers":86769,"channels":1503,"game":{"name":"League
+        of Legends","_id":21779,"giantbomb_id":24024,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-{width}x{height}.jpg"},"_links":{}}},{"viewers":37709,"channels":458,"game":{"name":"Counter-Strike:
+        Global Offensive","_id":32399,"giantbomb_id":36113,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"_links":{}}},{"viewers":24277,"channels":208,"game":{"name":"Dota
+        2","_id":29595,"giantbomb_id":32887,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-{width}x{height}.jpg"},"_links":{}}},{"viewers":19785,"channels":120,"game":{"name":"Hearthstone:
+        Heroes of Warcraft","_id":138585,"giantbomb_id":42033,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":15586,"channels":399,"game":{"name":"Battlefield
+        Hardline","_id":417791,"giantbomb_id":46431,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-{width}x{height}.jpg"},"_links":{}}},{"viewers":9404,"channels":327,"game":{"name":"Minecraft","_id":27471,"giantbomb_id":30475,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":9177,"channels":313,"game":{"name":"World
+        of Warcraft: Warlords of Draenor","_id":417972,"giantbomb_id":44468,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"_links":{}}},{"viewers":8020,"channels":696,"game":{"name":"Grand
+        Theft Auto V","_id":32982,"giantbomb_id":36765,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"_links":{}}},{"viewers":6047,"channels":211,"game":{"name":"H1Z1","_id":417892,"giantbomb_id":45959,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-{width}x{height}.jpg"},"_links":{}}},{"viewers":5986,"channels":122,"game":{"name":"RuneScape","_id":2083,"giantbomb_id":2268,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-{width}x{height}.jpg"},"_links":{}}}]}'
+    http_version: 
+  recorded_at: Tue, 17 Mar 2015 05:08:44 GMT
+- request:
+    method: get
+    uri: https://api.twitch.tv/kraken/games/top?offset=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.twitchtv.v3+json
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 17 Mar 2015 05:08:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1075'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Api-Version:
+      - '3'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - max-age=60, public
+      Vary:
+      - Accept-Encoding
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"7827e2d222f114c6465fc4e467221b96"'
+      X-Request-Id:
+      - d47624d4319242cd531cb5fa9dba621d
+      X-Runtime:
+      - '0.132312'
+      Accept-Ranges:
+      - bytes
+      X-Varnish:
+      - 496886860 496807624
+      Age:
+      - '16'
       Via:
       - 1.1 varnish
       X-Cache:
@@ -60,30 +126,26 @@ http_interactions:
       - 'on'
     body:
       encoding: ASCII-8BIT
-      string: '{"_total":942,"_links":{"self":"https://api.twitch.tv/kraken/games/top?limit=10&offset=0","next":"https://api.twitch.tv/kraken/games/top?limit=10&offset=10"},"top":[{"viewers":95314,"channels":1571,"game":{"name":"League
-        of Legends","_id":21779,"giantbomb_id":24024,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-{width}x{height}.jpg"},"_links":{}}},{"viewers":48836,"channels":532,"game":{"name":"Counter-Strike:
-        Global Offensive","_id":32399,"giantbomb_id":36113,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"_links":{}}},{"viewers":24547,"channels":224,"game":{"name":"Dota
-        2","_id":29595,"giantbomb_id":32887,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-{width}x{height}.jpg"},"_links":{}}},{"viewers":18089,"channels":146,"game":{"name":"Hearthstone:
-        Heroes of Warcraft","_id":138585,"giantbomb_id":42033,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":12148,"channels":333,"game":{"name":"Battlefield
-        Hardline","_id":417791,"giantbomb_id":46431,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-{width}x{height}.jpg"},"_links":{}}},{"viewers":12036,"channels":353,"game":{"name":"Minecraft","_id":27471,"giantbomb_id":30475,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":11504,"channels":404,"game":{"name":"World
-        of Warcraft: Warlords of Draenor","_id":417972,"giantbomb_id":44468,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"_links":{}}},{"viewers":10471,"channels":162,"game":{"name":"Cities:
-        Skylines","_id":461449,"giantbomb_id":47402,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-{width}x{height}.jpg"},"_links":{}}},{"viewers":8303,"channels":756,"game":{"name":"Grand
-        Theft Auto V","_id":32982,"giantbomb_id":36765,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"_links":{}}},{"viewers":6307,"channels":568,"game":{"name":"Destiny","_id":280721,"giantbomb_id":36067,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-{width}x{height}.jpg"},"_links":{}}}]}'
+      string: '{"_total":899,"_links":{"self":"https://api.twitch.tv/kraken/games/top?limit=10&offset=5","next":"https://api.twitch.tv/kraken/games/top?limit=10&offset=15","prev":"https://api.twitch.tv/kraken/games/top?limit=10&offset=0"},"top":[{"viewers":9384,"channels":323,"game":{"name":"Minecraft","_id":27471,"giantbomb_id":30475,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":9255,"channels":314,"game":{"name":"World
+        of Warcraft: Warlords of Draenor","_id":417972,"giantbomb_id":44468,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"_links":{}}},{"viewers":7936,"channels":699,"game":{"name":"Grand
+        Theft Auto V","_id":32982,"giantbomb_id":36765,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"_links":{}}},{"viewers":6005,"channels":212,"game":{"name":"H1Z1","_id":417892,"giantbomb_id":45959,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-{width}x{height}.jpg"},"_links":{}}},{"viewers":5986,"channels":123,"game":{"name":"RuneScape","_id":2083,"giantbomb_id":2268,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-{width}x{height}.jpg"},"_links":{}}},{"viewers":4963,"channels":476,"game":{"name":"Destiny","_id":280721,"giantbomb_id":36067,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-{width}x{height}.jpg"},"_links":{}}},{"viewers":4614,"channels":18,"game":{"name":"Gaming
+        Talk Shows","_id":417752,"giantbomb_id":0,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Gaming%20Talk%20Shows-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Gaming%20Talk%20Shows-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Gaming%20Talk%20Shows-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Gaming%20Talk%20Shows-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Gaming%20Talk%20Shows-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Gaming%20Talk%20Shows-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Gaming%20Talk%20Shows-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Gaming%20Talk%20Shows-{width}x{height}.jpg"},"_links":{}}},{"viewers":4405,"channels":88,"game":{"name":"Reign
+        Of Kings","_id":489171,"giantbomb_id":49121,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-{width}x{height}.jpg"},"_links":{}}},{"viewers":4280,"channels":159,"game":{"name":"Cities:
+        Skylines","_id":461449,"giantbomb_id":47402,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-{width}x{height}.jpg"},"_links":{}}},{"viewers":4237,"channels":55,"game":{"name":"StarCraft
+        II: Heart of the Swarm","_id":21818,"giantbomb_id":24078,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-{width}x{height}.jpg"},"_links":{}}}]}'
     http_version: 
-  recorded_at: Tue, 17 Mar 2015 04:24:58 GMT
+  recorded_at: Tue, 17 Mar 2015 05:08:45 GMT
 - request:
     method: get
-    uri: https://api.twitch.tv/kraken/games/top?headers%5BAccept%5D=application/vnd.twitchtv.v3%2Bjson&offset=5
+    uri: https://api.twitch.tv/kraken/games/top?offset=0
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      - application/vnd.twitchtv.v3+json
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
       code: 200
@@ -92,11 +154,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 17 Mar 2015 04:25:00 GMT
+      - Tue, 17 Mar 2015 05:08:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '1100'
+      - '1072'
       Connection:
       - keep-alive
       Status:
@@ -112,103 +174,33 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - '"cece9369c45d5731693b5cae14e1a002"'
+      - '"d6c8f40d55b29b2d46396fdac754759b"'
       X-Request-Id:
-      - fdb61f63f8a43c17b3eb864988773a76
+      - 4d7ce59675d6a76f146011646a5b2274
       X-Runtime:
-      - '0.109540'
+      - '0.023322'
       Accept-Ranges:
       - bytes
       X-Varnish:
-      - '2214663235'
+      - 2225253824 2225176410
       Age:
-      - '0'
+      - '19'
       Via:
       - 1.1 varnish
-      X-Mh-Cache:
-      - appcache1; M
+      X-Cache:
+      - appcache1; H
       Front-End-Https:
       - 'on'
     body:
       encoding: ASCII-8BIT
-      string: '{"_total":938,"_links":{"self":"https://api.twitch.tv/kraken/games/top?limit=10&offset=5","next":"https://api.twitch.tv/kraken/games/top?limit=10&offset=15","prev":"https://api.twitch.tv/kraken/games/top?limit=10&offset=0"},"top":[{"viewers":12029,"channels":351,"game":{"name":"Minecraft","_id":27471,"giantbomb_id":30475,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":11178,"channels":403,"game":{"name":"World
-        of Warcraft: Warlords of Draenor","_id":417972,"giantbomb_id":44468,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"_links":{}}},{"viewers":10459,"channels":162,"game":{"name":"Cities:
-        Skylines","_id":461449,"giantbomb_id":47402,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-{width}x{height}.jpg"},"_links":{}}},{"viewers":8288,"channels":755,"game":{"name":"Grand
-        Theft Auto V","_id":32982,"giantbomb_id":36765,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"_links":{}}},{"viewers":6299,"channels":566,"game":{"name":"Destiny","_id":280721,"giantbomb_id":36067,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Destiny-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Destiny-{width}x{height}.jpg"},"_links":{}}},{"viewers":6093,"channels":130,"game":{"name":"RuneScape","_id":2083,"giantbomb_id":2268,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-{width}x{height}.jpg"},"_links":{}}},{"viewers":5760,"channels":62,"game":{"name":"StarCraft
-        II: Heart of the Swarm","_id":21818,"giantbomb_id":24078,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II:%20Heart%20of%20the%20Swarm-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II:%20Heart%20of%20the%20Swarm-{width}x{height}.jpg"},"_links":{}}},{"viewers":5011,"channels":235,"game":{"name":"H1Z1","_id":417892,"giantbomb_id":45959,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-{width}x{height}.jpg"},"_links":{}}},{"viewers":4178,"channels":102,"game":{"name":"Reign
-        Of Kings","_id":489171,"giantbomb_id":49121,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Reign%20Of%20Kings-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Reign%20Of%20Kings-{width}x{height}.jpg"},"_links":{}}},{"viewers":3583,"channels":575,"game":{"name":"Call
-        of Duty: Advanced Warfare","_id":417973,"giantbomb_id":45359,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty:%20Advanced%20Warfare-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty:%20Advanced%20Warfare-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty:%20Advanced%20Warfare-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty:%20Advanced%20Warfare-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty:%20Advanced%20Warfare-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty:%20Advanced%20Warfare-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty:%20Advanced%20Warfare-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Call%20of%20Duty:%20Advanced%20Warfare-{width}x{height}.jpg"},"_links":{}}}]}'
+      string: '{"_total":896,"_links":{"self":"https://api.twitch.tv/kraken/games/top?limit=10&offset=0","next":"https://api.twitch.tv/kraken/games/top?limit=10&offset=10"},"top":[{"viewers":86769,"channels":1503,"game":{"name":"League
+        of Legends","_id":21779,"giantbomb_id":24024,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-{width}x{height}.jpg"},"_links":{}}},{"viewers":37709,"channels":458,"game":{"name":"Counter-Strike:
+        Global Offensive","_id":32399,"giantbomb_id":36113,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"_links":{}}},{"viewers":24277,"channels":208,"game":{"name":"Dota
+        2","_id":29595,"giantbomb_id":32887,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-{width}x{height}.jpg"},"_links":{}}},{"viewers":19785,"channels":120,"game":{"name":"Hearthstone:
+        Heroes of Warcraft","_id":138585,"giantbomb_id":42033,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":15586,"channels":399,"game":{"name":"Battlefield
+        Hardline","_id":417791,"giantbomb_id":46431,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-{width}x{height}.jpg"},"_links":{}}},{"viewers":9404,"channels":327,"game":{"name":"Minecraft","_id":27471,"giantbomb_id":30475,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":9177,"channels":313,"game":{"name":"World
+        of Warcraft: Warlords of Draenor","_id":417972,"giantbomb_id":44468,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"_links":{}}},{"viewers":8020,"channels":696,"game":{"name":"Grand
+        Theft Auto V","_id":32982,"giantbomb_id":36765,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"_links":{}}},{"viewers":6047,"channels":211,"game":{"name":"H1Z1","_id":417892,"giantbomb_id":45959,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/H1Z1-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/H1Z1-{width}x{height}.jpg"},"_links":{}}},{"viewers":5986,"channels":122,"game":{"name":"RuneScape","_id":2083,"giantbomb_id":2268,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-{width}x{height}.jpg"},"_links":{}}}]}'
     http_version: 
-  recorded_at: Tue, 17 Mar 2015 04:24:59 GMT
-- request:
-    method: get
-    uri: https://api.twitch.tv/kraken/games/top?headers%5BAccept%5D=application/vnd.twitchtv.v3%2Bjson&offset=0
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Tue, 17 Mar 2015 04:31:01 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Content-Length:
-      - '1078'
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Api-Version:
-      - '3'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Cache-Control:
-      - max-age=60, public
-      Vary:
-      - Accept-Encoding
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - '"d8a82eee518e1fd6fb0b267a4185dbef"'
-      X-Request-Id:
-      - 8c769997d99cf3ad0f372d21e4da2c55
-      X-Runtime:
-      - '0.055820'
-      Accept-Ranges:
-      - bytes
-      X-Varnish:
-      - '485861849'
-      Age:
-      - '0'
-      Via:
-      - 1.1 varnish
-      X-Mh-Cache:
-      - appcache2; M
-      Front-End-Https:
-      - 'on'
-    body:
-      encoding: ASCII-8BIT
-      string: '{"_total":935,"_links":{"self":"https://api.twitch.tv/kraken/games/top?limit=10&offset=0","next":"https://api.twitch.tv/kraken/games/top?limit=10&offset=10"},"top":[{"viewers":94403,"channels":1581,"game":{"name":"League
-        of Legends","_id":21779,"giantbomb_id":24024,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-{width}x{height}.jpg"},"_links":{}}},{"viewers":49134,"channels":527,"game":{"name":"Counter-Strike:
-        Global Offensive","_id":32399,"giantbomb_id":36113,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"},"_links":{}}},{"viewers":24142,"channels":223,"game":{"name":"Dota
-        2","_id":29595,"giantbomb_id":32887,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Dota%202-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Dota%202-{width}x{height}.jpg"},"_links":{}}},{"viewers":18258,"channels":149,"game":{"name":"Hearthstone:
-        Heroes of Warcraft","_id":138585,"giantbomb_id":42033,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Hearthstone:%20Heroes%20of%20Warcraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":12818,"channels":348,"game":{"name":"Battlefield
-        Hardline","_id":417791,"giantbomb_id":46431,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Battlefield%20Hardline-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Battlefield%20Hardline-{width}x{height}.jpg"},"_links":{}}},{"viewers":12000,"channels":343,"game":{"name":"Minecraft","_id":27471,"giantbomb_id":30475,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Minecraft-{width}x{height}.jpg"},"_links":{}}},{"viewers":10917,"channels":384,"game":{"name":"World
-        of Warcraft: Warlords of Draenor","_id":417972,"giantbomb_id":44468,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/World%20of%20Warcraft:%20Warlords%20of%20Draenor-{width}x{height}.jpg"},"_links":{}}},{"viewers":10656,"channels":166,"game":{"name":"Cities:
-        Skylines","_id":461449,"giantbomb_id":47402,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Cities:%20Skylines-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Cities:%20Skylines-{width}x{height}.jpg"},"_links":{}}},{"viewers":8336,"channels":746,"game":{"name":"Grand
-        Theft Auto V","_id":32982,"giantbomb_id":36765,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"},"_links":{}}},{"viewers":6234,"channels":132,"game":{"name":"RuneScape","_id":2083,"giantbomb_id":2268,"box":{"large":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-272x380.jpg","medium":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-136x190.jpg","small":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-52x72.jpg","template":"http://static-cdn.jtvnw.net/ttv-boxart/RuneScape-{width}x{height}.jpg"},"logo":{"large":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-240x144.jpg","medium":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-120x72.jpg","small":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-60x36.jpg","template":"http://static-cdn.jtvnw.net/ttv-logoart/RuneScape-{width}x{height}.jpg"},"_links":{}}}]}'
-    http_version: 
-  recorded_at: Tue, 17 Mar 2015 04:31:00 GMT
+  recorded_at: Tue, 17 Mar 2015 05:08:46 GMT
 recorded_with: VCR 2.9.3
