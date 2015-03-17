@@ -16,10 +16,7 @@ module TwitchCli
       { "channel" => { "display_name" => "s4", "status" => "s4 msg" }},
     ]}
 
-    let(:client) { double({
-      :get_games => {"top" => games},
-      :get_streams => {"streams" => streams}
-    })}
+    let(:client) { double("twitch_client")}
 
     let(:shell) { Thor::Base.shell.new }
 
@@ -38,6 +35,7 @@ module TwitchCli
     end
 
     it "lists the games being streamed" do
+      allow(client).to receive(:get_games).and_return({"top" => games})
       games.each do |g|
         expect(shell).to receive(:say).with("#{App.game_to_str(g)}")
       end
@@ -45,7 +43,21 @@ module TwitchCli
       App.start(["games"], :shell => shell)
     end
 
+    it "asks if should fetch more games" do
+      allow(client).to receive(:get_games).with(0).and_return({"top" => games.slice(0,2)})
+      allow(client).to receive(:get_games).with(2).and_return( {"top" => games.slice(2,2)})
+
+      games.each do |g|
+        expect(shell).to receive(:say).with("#{App.game_to_str(g)}")
+      end
+      expect(shell).to receive(:yes?).and_return(true, false)
+
+      App.start(["games", "--more"], :shell => shell)
+    end
+
     it "lists streams under a game" do
+      allow(client).to receive(:get_streams).and_return({"streams" => streams})
+
       streams.each do |s|
         expect(shell).to receive(:say).with("#{App.stream_to_str(s)}")
       end

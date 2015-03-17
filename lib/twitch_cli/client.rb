@@ -13,8 +13,8 @@ module TwitchCli
       @options = { :headers => {"Accept" => VERSION} }
     end
 
-    def get_games
-      self.class.get("/games/top", {query: @options})
+    def get_games offset=0
+      self.class.get("/games/top", {query: {:offset => offset}.merge!(@options)})
     end
 
     def get_streams game

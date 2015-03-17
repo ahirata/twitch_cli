@@ -11,10 +11,16 @@ module TwitchCli
     end
 
     desc "games", "lists the games being streamed"
+    option :more, :type => :boolean, :desc => "fetch multiple pages"
     def games
-      result = client.get_games
-      result["top"].each do |game|
-        say self.class.game_to_str(game)
+      offset = 0
+      loop do
+        result = client.get_games offset
+        result["top"].each do |game|
+          say self.class.game_to_str(game)
+        end
+        offset += result["top"].length
+        break unless options[:more] && yes?("Type 'y' to fetch more games")
       end
     end
 
