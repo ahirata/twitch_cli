@@ -27,8 +27,8 @@ module TwitchCli
       end
     end
 
-    desc "streams GAME", "list the online users streaming a GAME"
-    def streams game
+    desc "streams [GAME]", "list the online users streaming [GAME]"
+    def streams game=@config["game"]
       result = client.get_streams(game)
       result["streams"].each do |stream|
         say self.class.stream_to_str(stream)

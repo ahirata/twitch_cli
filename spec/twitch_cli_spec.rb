@@ -47,6 +47,8 @@ module TwitchCli
     end
 
     it "doesnt break if there is no default configuration file" do
+      expect(Configuration).to receive(:setup).with(File.join(Dir.home, ".twitch_cli")).and_return({})
+
       expect(App.new([], []).config).to eql({})
     end
 
@@ -79,6 +81,17 @@ module TwitchCli
       end
 
       App.start(["streams", "some_game"], :shell => shell)
+    end
+
+    it "lists streams for the default game" do
+      allow(Configuration).to receive(:setup).and_return({"game" => "default_game"})
+      expect(client).to receive(:get_streams).with("default_game").and_return({"streams" => streams})
+
+      streams.each do |s|
+        expect(shell).to receive(:say).with("#{App.stream_to_str(s)}")
+      end
+
+      App.start(["streams"], :shell => shell)
     end
   end
 end
