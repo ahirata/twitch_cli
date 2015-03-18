@@ -1,13 +1,16 @@
 require 'thor'
 require_relative 'twitch_cli/client'
+require_relative 'twitch_cli/configuration'
 
 module TwitchCli
   class App < Thor
-    attr_accessor :client
+    class_option :config, :type => :string, :banner => "FILE", :desc => "Use this configuration file", :default => File.join(Dir.home, ".twitch_cli")
+    attr_accessor :client, :config
 
     def initialize *args
       super
       @client = Client.new
+      @config = Configuration.setup(options[:config])
     end
 
     desc "games", "lists the games being streamed"

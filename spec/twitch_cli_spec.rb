@@ -34,6 +34,22 @@ module TwitchCli
       expect(result).to eql("s1 - s1 msg")
     end
 
+    it "accepts a configuration file" do
+      expect(Configuration).to receive(:setup).with("somefile").and_return({"key"=>"value"})
+
+      expect(App.new([], ["--config=somefile"]).config["key"]).to eql("value")
+    end
+
+    it "uses default filename for the configuration file" do
+      expect(Configuration).to receive(:setup).with(File.join(Dir.home, ".twitch_cli")).and_return({"key"=>"value"})
+
+      expect(App.new([], []).config["key"]).to eql("value")
+    end
+
+    it "doesnt break if there is no default configuration file" do
+      expect(App.new([], []).config).to eql({})
+    end
+
     it "lists the games being streamed" do
       allow(client).to receive(:get_games).and_return({"top" => games})
       games.each do |g|
