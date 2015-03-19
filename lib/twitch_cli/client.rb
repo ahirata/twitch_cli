@@ -17,8 +17,8 @@ module TwitchCli
       self.class.get("/games/top", {:query => {:offset => offset}}.merge!(@options))
     end
 
-    def get_streams game
-      self.class.get("/streams", {:query => {:game => game}.merge!(@options)})
+    def get_streams game, offset=0
+      self.class.get("/streams", {:query => {:game => game, :offset => offset}.merge!(@options)})
     end
   end
 end

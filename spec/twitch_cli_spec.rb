@@ -63,7 +63,7 @@ module TwitchCli
 
     it "asks if should fetch more games" do
       allow(client).to receive(:get_games).with(0).and_return({"top" => games.slice(0,2)})
-      allow(client).to receive(:get_games).with(2).and_return( {"top" => games.slice(2,2)})
+      allow(client).to receive(:get_games).with(2).and_return({"top" => games.slice(2,2)})
 
       games.each do |g|
         expect(shell).to receive(:say).with("#{App.game_to_str(g)}")
@@ -85,7 +85,7 @@ module TwitchCli
 
     it "lists streams for the default game" do
       allow(Configuration).to receive(:setup).and_return({"game" => "default_game"})
-      expect(client).to receive(:get_streams).with("default_game").and_return({"streams" => streams})
+      expect(client).to receive(:get_streams).with("default_game", 0).and_return({"streams" => streams})
 
       streams.each do |s|
         expect(shell).to receive(:say).with("#{App.stream_to_str(s)}")
@@ -93,5 +93,18 @@ module TwitchCli
 
       App.start(["streams"], :shell => shell)
     end
+
+    it "asks if should fetch more streams" do
+      allow(client).to receive(:get_streams).with("some_game", 0).and_return({"streams" => streams.slice(0,2)})
+      allow(client).to receive(:get_streams).with("some_game", 2).and_return( {"streams" => streams.slice(2,2)})
+
+      streams.each do |s|
+        expect(shell).to receive(:say).with("#{App.stream_to_str(s)}")
+      end
+      expect(shell).to receive(:yes?).and_return(true, false)
+
+      App.start(["streams", "some_game", "--more"], :shell => shell)
+    end
   end
+
 end

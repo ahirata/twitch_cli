@@ -5,6 +5,8 @@ require_relative 'twitch_cli/configuration'
 module TwitchCli
   class App < Thor
     class_option :config, :type => :string, :banner => "FILE", :desc => "Use this configuration file", :default => File.join(Dir.home, ".twitch_cli")
+    class_option :more, :type => :boolean, :desc => "fetch multiple pages"
+
     attr_accessor :client, :config
 
     def initialize *args
@@ -14,7 +16,6 @@ module TwitchCli
     end
 
     desc "games", "lists the games being streamed"
-    option :more, :type => :boolean, :desc => "fetch multiple pages"
     def games
       offset = 0
       loop do
@@ -29,9 +30,14 @@ module TwitchCli
 
     desc "streams [GAME]", "list the online users streaming [GAME]"
     def streams game=@config["game"]
-      result = client.get_streams(game)
-      result["streams"].each do |stream|
-        say self.class.stream_to_str(stream)
+      offset = 0
+      loop do
+        result = client.get_streams(game, offset)
+        result["streams"].each do |stream|
+          say self.class.stream_to_str(stream)
+        end
+        offset += result["streams"].length
+        break unless options[:more] && yes?("Type 'y' to fetch more streams")
       end
     end
 
