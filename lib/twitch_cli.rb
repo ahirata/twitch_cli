@@ -1,10 +1,9 @@
 require 'thor'
 require_relative 'twitch_cli/client'
-require_relative 'twitch_cli/configuration'
 
 module TwitchCli
   class App < Thor
-    class_option :config, :type => :string, :banner => "FILE", :desc => "Use this configuration file", :default => File.join(Dir.home, ".twitch_cli")
+    class_option :config, :type => :string, :banner => "FILE", :desc => "Use this YAML configuration file", :default => File.join(Dir.home, ".twitch_cli.yml")
     class_option :more, :type => :boolean, :desc => "fetch multiple pages"
 
     attr_accessor :client, :config
@@ -12,7 +11,7 @@ module TwitchCli
     def initialize *args
       super
       @client = Client.new
-      @config = Configuration.setup(options[:config])
+      @config = File.exist?(options[:config]) ? YAML.load_file(options[:config]) : {}
     end
 
     desc "games", "lists the games being streamed"
