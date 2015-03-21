@@ -60,7 +60,7 @@ module TwitchCli
     context "commands" do
       before do
         allow(File).to receive(:exist?).and_return(true)
-        allow(YAML).to receive(:load_file).and_return({"game" => "default_game"})
+        allow(YAML).to receive(:load_file).and_return({"game" => "default_game", "alias" => {"dg" => "default_game"}})
       end
 
       it "lists the games being streamed" do
@@ -114,6 +114,16 @@ module TwitchCli
         expect(shell).to receive(:yes?).and_return(true, false)
 
         App.start(["streams", "some_game", "--more"], :shell => shell)
+      end
+
+      it "accepts alias for the game name" do
+        expect(client).to receive(:get_streams).with("default_game", 0).and_return({"streams" => streams})
+
+        streams.each do |s|
+          expect(shell).to receive(:say).with("#{App.stream_to_str(s)}")
+        end
+
+        App.start(["streams", "dg"], :shell => shell)
       end
     end
   end

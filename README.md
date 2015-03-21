@@ -15,8 +15,18 @@ Options:
 ```
 
 You can set a default game for the `streams` command in the configuration file:
+
 ```
 game: 'StarCraft II: Heart of the Swarm'
 ```
 
 The name of the game must match the one returned by the `games` command.
+
+But you can configure aliases to each game:
+
+```
+alias:
+  csgo: 'Counter-Strike: Global Offensive'
+  sc2: 'StarCraft II: Heart of the Swarm'
+```
+

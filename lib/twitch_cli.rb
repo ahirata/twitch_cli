@@ -30,6 +30,7 @@ module TwitchCli
     desc "streams [GAME]", "list the online users streaming [GAME]"
     def streams game=@config["game"]
       offset = 0
+      game = get_alias(game)
       loop do
         result = client.get_streams(game, offset)
         result["streams"].each do |stream|
@@ -40,13 +41,19 @@ module TwitchCli
       end
     end
 
+    private
+    def get_alias game
+      config["alias"] && config["alias"][game] || game
+    end
+
     def self.game_to_str game
-        "#{game['game']['name']}".strip
+      "#{game['game']['name']}".strip
     end
 
     def self.stream_to_str stream
-        "#{stream['channel']['display_name']} - #{stream['channel']['status']}".strip
+      "#{stream['channel']['display_name']} - #{stream['channel']['status']}".strip
     end
+
   end
 end
 
